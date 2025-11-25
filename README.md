@@ -30,36 +30,47 @@ Frontend: HTML, CSS, JavaScript
 Database: SQLite
 
 Setup Instructions
+
 1.Clone the repository
+
 git clone https://github.com/<your-username>/task-analyzer.git
 cd task-analyzer
 
 2.Set up the backend environment
+
 python -m venv venv
+
 For windows
+
 venv\Scripts\activate
 
 For Mac/Linux
+
 source venv/bin/activate
 
 
 3.Install dependencies
+
 pip install -r requirements.txt
 
 4.Run migrations
+
 cd backend
 python manage.py migrate
 
 5.Start the server.
+
 python manage.py runserver
 
 6.Set up the frontend using a simple HTTP server.
 
 API Documentation
+
 POST /api/tasks/analyze/
 GET /api/tasks/suggest/
 
 Algorithm Explanation
+
 The Task Priority Analyzer uses a weighted scoring algorithm that evaluates each task based on four main components: urgency, importance, effort, and dependencies. The goal of the algorithm is to emulate how humans naturally decide which tasks are worth prioritizing, while providing a quantifiable and explainable output.
 
 Urgency is determined by comparing the task’s due date with the current date. Tasks due very soon receive a high urgency score. Tasks that are overdue receive an even higher score because they require immediate attention. Tasks due far in the future receive lower urgency values. This ensures the system respects deadlines realistically.
@@ -109,3 +120,4 @@ Future Improvements
 - Add analytics dashboard
 - Save tasks to database
 - Drag & drop UI
+
