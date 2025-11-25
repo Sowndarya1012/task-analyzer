@@ -1,0 +1,114 @@
+/* Background */
+body {
+    margin: 0;
+    font-family: "Segoe UI", sans-serif;
+    background: #eef2f3;
+}
+
+/* Header */
+header {
+    text-align: center;
+    padding: 40px 10px;
+    background: linear-gradient(135deg, #032f63, #032f63);
+    color: white;
+}
+
+header h1 {
+    font-size: 34px;
+    margin-bottom: 8px;
+}
+
+header p {
+    opacity: 0.8;
+    font-size: 16px;
+}
+
+/* Container */
+.container {
+    max-width: 900px;
+    margin: auto;
+    padding: 20px;
+}
+
+/* Card */
+.card {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+    transition: 0.2s;
+}
+
+.card:hover {
+    transform: scale(1.01);
+}
+
+/* Inputs */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 12px;
+}
+
+input, textarea, select {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 15px;
+}
+
+/* Buttons */
+.btn {
+    padding: 12px 18px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    background: #444;
+    color: white;
+    margin-top: 10px;
+}
+
+.btn.primary {
+    background: #032f63;
+}
+
+.btn.outline {
+    background: white;
+    color: #333;
+    border: 2px solid #333;
+}
+
+.button-row {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+/* Task Cards */
+.task-card {
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 12px;
+    border-left: 6px solid;
+}
+
+.high {
+    border-left-color: #d32f2f;
+    background: #fdecea;
+}
+
+.medium {
+    border-left-color: #f9a825;
+    background: #fff9e6;
+}
+
+.low {
+    border-left-color: #2e7d32;
+    background: #e8f5e9;
+}
+
+.error {
+    color: red;
+    font-weight: bold;
+}

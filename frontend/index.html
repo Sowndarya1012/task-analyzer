@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Priority Analyzer</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<header>
+    <h1>Task Priority Analyzer</h1>
+    <p>Smart ranking based on deadlines, effort, impact & dependencies.</p>
+</header>
+
+<div class="container">
+
+    <!-- Add Task Section -->
+    <section class="card">
+        <h2>Add Task Manually</h2>
+
+        <div class="grid">
+            <input id="title" placeholder="Task Title" />
+            <input id="due_date" type="date" />
+            <input id="hours" type="number" placeholder="Estimated Hours" min="0" />
+            <input id="importance" type="number" placeholder="Importance (1-10)" min="1" max="10" />
+            <input id="dependencies" placeholder="Dependencies (Comma IDs)" />
+        </div>
+
+        <button id="addTask" class="btn">Add Task</button>
+
+        <h3>Bulk JSON Input</h3>
+        <textarea id="bulk" placeholder="Paste JSON array of tasks here..."></textarea>
+    </section>
+
+    <!-- Options -->
+    <section class="card">
+        <h2>Analysis Options</h2>
+
+        <label>Select Strategy:</label>
+        <select id="strategy">
+            <option value="smart">Smart Balance</option>
+            <option value="fastest">Fastest Wins</option>
+            <option value="impact">High Impact</option>
+            <option value="deadline">Deadline Driven</option>
+        </select>
+
+        <div class="button-row">
+            <button id="analyze" class="btn primary">Analyze Tasks</button>
+            <button id="suggest" class="btn outline">Top 3 Suggestions</button>
+        </div>
+
+        <p id="error" class="error"></p>
+    </section>
+
+    <!-- Local Task List -->
+    <section class="card">
+        <h2>Tasks (Local Preview)</h2>
+        <pre id="localList">[]</pre>
+    </section>
+
+    <!-- Results -->
+    <section class="card">
+        <h2>Results</h2>
+        <div id="results"></div>
+    </section>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
