@@ -3,12 +3,9 @@ const localList = document.getElementById("localList");
 const resultsDiv = document.getElementById("results");
 const errorBox = document.getElementById("error");
 
-// Update local preview
 function refreshLocal() {
     localList.textContent = JSON.stringify(localTasks, null, 2);
 }
-
-// Add Task Manually
 document.getElementById("addTask").onclick = () => {
     const t = {
         id: (Math.random() * 100000).toFixed(0),
@@ -31,7 +28,6 @@ document.getElementById("addTask").onclick = () => {
     errorBox.textContent = "";
 };
 
-// Analyze Tasks
 document.getElementById("analyze").onclick = async () => {
     let tasks = [];
     const bulk = document.getElementById("bulk").value.trim();
@@ -75,7 +71,6 @@ document.getElementById("analyze").onclick = async () => {
     }
 };
 
-// Suggest Top 3 Tasks
 document.getElementById("suggest").onclick = async () => {
     let tasks = localTasks.slice();
     const bulk = document.getElementById("bulk").value.trim();
@@ -115,7 +110,6 @@ document.getElementById("suggest").onclick = async () => {
     }
 };
 
-// Render results from /analyze
 function renderResults(results) {
     resultsDiv.innerHTML = "";
 
@@ -147,7 +141,6 @@ function renderResults(results) {
     });
 }
 
-// Render suggestions (top 3)
 function renderSuggestions(suggestions) {
     resultsDiv.innerHTML = "<h3>Top 3 Suggestions</h3>";
 

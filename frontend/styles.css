@@ -1,11 +1,10 @@
-/* Background */
+
 body {
     margin: 0;
     font-family: "Segoe UI", sans-serif;
     background: #eef2f3;
 }
 
-/* Header */
 header {
     text-align: center;
     padding: 40px 10px;
@@ -23,14 +22,11 @@ header p {
     font-size: 16px;
 }
 
-/* Container */
 .container {
     max-width: 900px;
     margin: auto;
     padding: 20px;
 }
-
-/* Card */
 .card {
     background: white;
     padding: 20px;
@@ -43,8 +39,6 @@ header p {
 .card:hover {
     transform: scale(1.01);
 }
-
-/* Inputs */
 .grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -58,7 +52,6 @@ input, textarea, select {
     font-size: 15px;
 }
 
-/* Buttons */
 .btn {
     padding: 12px 18px;
     border: none;
@@ -85,7 +78,6 @@ input, textarea, select {
     margin-top: 15px;
 }
 
-/* Task Cards */
 .task-card {
     padding: 15px;
     border-radius: 10px;
